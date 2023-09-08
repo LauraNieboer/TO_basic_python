@@ -4,6 +4,7 @@ import sys
 # I remove the newlines since these are annoying to print...
 # stdin will be read until newline. Modify this if you please. 
 
+#johans:
 x = ""
 for line in sys.stdin:
     x += line
@@ -15,6 +16,8 @@ count = {}
 # Count the characters in `x`` and put the counts in `counts`.
 # Your code goes here.
 
+#for c in abc:
+#    print(x)
 
 # Get the keys, i.e., the characters, in sorted order
 # and print the count

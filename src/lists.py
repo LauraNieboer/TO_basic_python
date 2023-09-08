@@ -1,9 +1,42 @@
-import sys
+#import sys
 
 # This reads all of stdin and converts it into a list of integers.
 # This *only* works if there are no non-integers in the input.
 # You can learn how to deal with errors later...
-x = [int(a) for a in sys.stdin.read().split()]
+#x = [int(a) for a in sys.stdin.read().split()]
+
+x = [1, 2, 3, 4, 5, 6]
+#print(len(x))
+y=0
+for i in x:
+    y=y+i
+#print(y)
+
+def mean(x):
+    y=0
+    for i in x:
+        y=y+i
+    return (y/len(x))
+
+#print(mean(x))
+
+def three_times(x):
+    three_times_list=[]
+    for i in x:
+        y=i*3
+        three_times_list.append(y)
+    return three_times_list
+
+#print(three_times(x))
+
+def even_numbers(x):
+    even_numbers_list=[]
+    for i in x:
+        if i%2==0:
+            even_numbers_list.append(i)
+    return even_numbers_list
+
+print(even_numbers(x))
 
 # if you have a list of integers you want to write to stdout in the same
 # space separated format, you cannot use print(x) since that will add the
@@ -19,8 +52,8 @@ x = [int(a) for a in sys.stdin.read().split()]
 # a little more readable:
 
 
-def print_list(x):
-    print(" ".join(str(i) for i in x))
+#def print_list(x):
+#    print(" ".join(str(i) for i in x))
 
 
 # We haven't covered functions yet, it is a few weeks away, but all
@@ -35,26 +68,26 @@ def print_list(x):
 # "even" it is the third. Any other option is an error.
 
 
-if len(sys.argv) < 2:
-    print("Incorrect number of arguments.", file=sys.stderr)
-    sys.exit(1)
+#if len(sys.argv) < 2:
+#    print("Incorrect number of arguments.", file=sys.stderr)
+#    sys.exit(1)
 
-match sys.argv[1]:
-    case "mean":
+#match sys.argv[1]:
+#    case "mean":
         # put your solution to the first exercise here
-        mean = "mean of x"
-        print(mean)
+#        mean = "mean of x"
+#        print(mean)
 
-    case "times":
+#    case "times":
         # Put your solution to the second exercise here
-        times_three = []
-        print_list(times_three)
+#        times_three = []
+#        print_list(times_three)
 
-    case "even":
+#    case "even":
         # Put your solution to the third exercise here
-        even = []
-        print_list(even)
+#        even = []
+#        print_list(even)
 
-    case _:
-        print(f"Incorrect command {sys.argv[1]}.", file=sys.stderr)
-        sys.exit(1)
+#    case _:
+#        print(f"Incorrect command {sys.argv[1]}.", file=sys.stderr)
+#        sys.exit(1)
